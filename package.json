@@ -1,13 +1,14 @@
 {
   "name": "shop-admin",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint": "eslint ./src/**/*.{js,jsx,vue,ts,tsx} --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "release": "standard-version"
   },
   "dependencies": {
     "vue": "^3.2.25"
@@ -26,6 +27,7 @@
     "eslint-plugin-vue": "^8.5.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.7",
+    "standard-version": "^9.3.2",
     "typescript": "^4.5.4",
     "vite": "^2.8.0",
     "vite-plugin-eslint": "^1.3.0",
