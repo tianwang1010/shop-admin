@@ -19,5 +19,16 @@ module.exports = {
     '@typescript-eslint'
   ],
   rules: {
-  }
+    'vue/multi-word-component-names': ['error', {
+      ignores: ['index', 'Notification']
+    }]
+  },
+  overrides: [
+    {
+      files: ['src/api/**/*.ts'],
+      rules: {
+        camelcase: 'off'
+      }
+    }
+  ]
 }
