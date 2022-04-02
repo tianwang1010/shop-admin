@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import layout from '@/layout/index.vue'
-import productRoutes from './product'
+import productRoutes from './modules/product'
 import orderRoutes from './modules/order'
 import permissionRoutes from './modules/permission'
 import mediaRoutes from './modules/media'
