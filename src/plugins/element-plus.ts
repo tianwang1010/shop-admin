@@ -10,6 +10,6 @@ export default {
     for (k in icons) {
       app.component(k, icons[k])
     }
-    app.use(ElementPlus, { size: 'small', zIndex: 2000 })
+    app.use(ElementPlus, { size: 'default', zIndex: 2000 })
   }
 }

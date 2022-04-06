@@ -1,6 +1,6 @@
 <template>
   <el-icon @click="handleCollapse">
-    <template v-if="collapseIcon">
+    <template v-if="!store.state.isCollapse">
       <fold />
     </template>
     <template v-else>
@@ -11,13 +11,8 @@
 
 <script lang="ts" setup>
 import { useStore } from '@/store'
-import { computed } from 'vue'
 
 const store = useStore()
-
-const collapseIcon = computed(() => {
-  return !store.state.isCollapse
-})
 
 const handleCollapse = () => {
   store.commit('setIsCollapse', !store.state.isCollapse)

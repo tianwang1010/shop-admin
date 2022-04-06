@@ -6,8 +6,14 @@ import elementPlus from './plugins/element-plus'
 // 加载全局样式
 import './styles/index.scss'
 
-createApp(App)
-  .use(router)
+const modules = import.meta.globEager('./components/**/index.ts')
+
+const app = createApp(App)
+for (const path in modules) {
+  console.log(path)
+  app.use(modules[path].default)
+}
+app.use(router)
   .use(store, key)
   .use(elementPlus)
   .mount('#app')
