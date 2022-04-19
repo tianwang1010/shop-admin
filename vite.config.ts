@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import eslintPlugin from 'vite-plugin-eslint'
 import vue from '@vitejs/plugin-vue'
-const { resolve } = require('path')
+const path = require('path')
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -15,7 +15,7 @@ export default defineConfig({
   resolve: {
     // 配置别名
     alias: {
-      '@': resolve(__dirname, './src')
+      '@': path.join(__dirname, 'src')
     }
   },
   plugins: [

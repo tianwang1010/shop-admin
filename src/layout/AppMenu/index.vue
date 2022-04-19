@@ -2,7 +2,7 @@
   <el-menu
     :collapse="$store.state.isCollapse"
     :unique-opened="true"
-    default-active="/"
+    :default-active="defaultActive"
     class="el-menu-vertical-demo"
     background-color="#304156"
     text-color="#bcc0c5"
@@ -95,6 +95,12 @@
 </template>
 
 <script lang="ts" setup>
+import { ref } from 'vue'
+import { useRoute } from 'vue-router'
+const defaultActive = ref('')
+const userRoute = useRoute()
+defaultActive.value = userRoute.path
+
 </script>
 
 <style lang="scss" scoped>

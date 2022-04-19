@@ -64,6 +64,7 @@ const handleSwitchChange = async (row:Admin) => {
     message: row.status === 1 ? '开启成功' : '关闭成功'
   })
 }
+
 onMounted(() => {
   loadList()
 })
